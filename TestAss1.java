@@ -1,3 +1,5 @@
+import java.util.*;
+import java.io.DataInput;
 class TestAss1 {
    public static void main ( String[] args ) {
       int M = StdIn.readInt();
@@ -10,12 +12,12 @@ class TestAss1 {
         ZOrep zo2 = new ZOrep( zo1.N, zo1.t );
         b = zo2.a;
       } else {
-        FLrep fl1 = new FLrep( M, a );
-        FLrep fl2 = new FLrep( fl1.N, fl1.t );
-        b = fl2.a;
+//        FLrep fl1 = new FLrep( M, a );
+//        FLrep fl2 = new FLrep( fl1.N, fl1.t );
+//        b = fl2.a;
       }
       // the arrays should be the same.
       for (int i=0; i<M; ++i) System.out.print( a[i] );  System.out.println();
-      for (int i=0; i<M; ++i) System.out.print( b[i] );  System.out.println();
+//      for (int i=0; i<M; ++i) System.out.print( b[i] );  System.out.println();
    }
 }
