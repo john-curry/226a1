@@ -1,12 +1,11 @@
 import java.util.*;
-import java.io.DataInput;
 class TestAss1 {
    public static void main ( String[] args ) {
       int M = StdIn.readInt();
       int a[] = new int[M+1];
       int b[];
       for (int i=0; i<M; ++i) a[i] = StdIn.readInt();
-      boolean testZO = false;
+      boolean testZO = true;
       if (testZO) {
         ZOrep zo1 = new ZOrep( M, a );
         ZOrep zo2 = new ZOrep( zo1.N, zo1.t );

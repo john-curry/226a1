@@ -8,9 +8,9 @@ class ZOrep extends TreeAndRepresentation {
   }
   ZOrep( int n, BT t ) { // given tree build sequence
       super( n, t );
-      M = (2 * M) + 1;
+      M = (2 * N) + 1;
       a = new int[M];
-      k = -1;
+      k = 0;
       traverse( t );
       // preorder:
       //  process this node
