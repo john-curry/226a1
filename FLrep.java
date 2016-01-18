@@ -15,11 +15,10 @@ class FLrep extends TreeAndRepresentation {
 
   void traverse(BT t) {
     if (t == null) { return; }
+    a[k++] = height;
     height++;
     traverse(t.L);
     height--;
-    a[k] = height;
-    height++;
     traverse(t.R);
   }
 

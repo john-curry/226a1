@@ -5,7 +5,7 @@ class TestAss1 {
       int a[] = new int[M+1];
       int b[];
       for (int i=0; i<M; ++i) a[i] = StdIn.readInt();
-      boolean testZO = true;
+      boolean testZO = false;
       if (testZO) {
         ZOrep zo1 = new ZOrep( M, a );
         ZOrep zo2 = new ZOrep( zo1.N, zo1.t );
