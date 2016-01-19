@@ -2,7 +2,7 @@ import java.util.*;
 class TestAss1 {
    public static void main ( String[] args ) {
       int M = StdIn.readInt();
-      int a[] = new int[M+1];
+      int a[] = new int[M];
       int b[];
       for (int i=0; i<M; ++i) a[i] = StdIn.readInt();
       boolean testZO = false;
