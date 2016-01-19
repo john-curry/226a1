@@ -9,7 +9,7 @@ all: $(TARGETS)
 	$(CC) $(FLAGS) $<
 
 run: 
-	java TestAss1 < test2.txt
+	java TestAss1 < test3.txt
 
 clean:
 	rm *.class

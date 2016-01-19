@@ -5,13 +5,16 @@ class FLrep extends TreeAndRepresentation {
   int k = 0;
   boolean DEBUG = true;
   int depth_of_binary_tree = -1;
+
   FLrep( int N, BT t ) { // given tree build sequence
     super( N, t );
-    M = (2 * N) + 1;
+    M = 2 * (N + 1);
     a = new int[M];
     // process left child
     // process node
     // process right child    
+    debug("Converting binary tree on: " + N + " nodes.\n"
+         +"to array of size: " + M + "\n");
     traverse(t);
 
   }
@@ -20,8 +23,8 @@ class FLrep extends TreeAndRepresentation {
     if (t == null) { return; }
     height++;
     traverse(t.L);
-    a[k++] = height;
     height--;
+    a[k++] = height;
     traverse(t.R);
   }
 
@@ -38,7 +41,7 @@ class FLrep extends TreeAndRepresentation {
 
       debug("Found root " + a[k] + " at index " + k);
 
-      t = build(k, 0, m); 
+      t = build(k, 0, m - 1); 
     }
   }
 
@@ -60,19 +63,19 @@ class FLrep extends TreeAndRepresentation {
      } 
      else {
        int i = lb;
-       while (i++ != index_of_node) {
+       do {
          if (a[i] == a[index_of_node] + 1) {
             lci = i;
             break;
          }
-       }
+       } while (++i != index_of_node);
      }
      if (ub == index_of_node) {
        rc = null;
      }
      else {
        int j = index_of_node;
-       while(j++ != ub) {
+       while(j++ <= ub) {
          if (a[j] == a[index_of_node]) {
            rci = j;
            break;
