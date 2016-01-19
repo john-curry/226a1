@@ -3,7 +3,7 @@ class FLrep extends TreeAndRepresentation {
   // VARIABLES, IF ANY NEEDED
   int height = 0;
   int k = 0;
-  boolean DEBUG = true;
+  boolean DEBUG = false;
   int depth_of_binary_tree = -1;
 
   FLrep( int N, BT t ) { // given tree build sequence
@@ -55,7 +55,7 @@ class FLrep extends TreeAndRepresentation {
         is the right index
 
       */ 
-     int lci = -1, rci = -1; // left&right child index
+     int lci = -1, rci = -1; // left & right child index
      BT rc = null, lc = null;
 
      if (lb == index_of_node) {
@@ -70,6 +70,7 @@ class FLrep extends TreeAndRepresentation {
          }
        } while (++i != index_of_node);
      }
+
      if (ub == index_of_node) {
        rc = null;
      }
@@ -82,12 +83,14 @@ class FLrep extends TreeAndRepresentation {
          }
        }
      }
+
      debug("Vertex " + index_of_node + "\n"
            +"at height " + a[index_of_node] + "\n"
            +(lci == -1 ? "No left child.\n" : "left child at: " + lci + "\n")
            +(rci == -1 ? "No right child.\n": "right child at: " + rci + "\n")
            +"Upper bound: " + ub + "\nLower Bound: " + lb + "\n" 
           );
+
      if (lci != -1) {
        lc = build(lci, lb, index_of_node - 1);
      }
