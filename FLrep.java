@@ -2,7 +2,7 @@ import java.util.Arrays;
 class FLrep extends TreeAndRepresentation {
   // VARIABLES, IF ANY NEEDED
   int height = 0;
-  int k = 0;
+  int k = -1;
   boolean DEBUG = false;
   int depth_of_binary_tree = -1;
 
@@ -10,6 +10,7 @@ class FLrep extends TreeAndRepresentation {
     super( N, t );
     M = 2 * (N + 1);
     a = new int[M];
+    k  = 0;
     // process left child
     // process node
     // process right child    
@@ -37,7 +38,7 @@ class FLrep extends TreeAndRepresentation {
 
     if (a.length == 1) { t = new BT(null, null); }
     else {
-      while (a[k++] != 0) { }
+      while (a[++k] != 0) { }
 
       debug("Found root " + a[k] + " at index " + k);
 
