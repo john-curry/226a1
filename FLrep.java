@@ -35,9 +35,9 @@ class FLrep extends TreeAndRepresentation {
     debug("Array " + Arrays.toString(b) 
          +"\nSize " + m+"\n\n");
 
-    if (a[k] == 0) t = new BT(null, null);
+    if (a.length == 1) { t = new BT(null, null); }
     else {
-      while (a[++k] != 0) { }
+      while (a[k++] != 0) { }
 
       debug("Found root " + a[k] + " at index " + k);
 

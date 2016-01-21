@@ -1,2 +1,5 @@
 *.class
 tags
+*.log
+old
+*.err
