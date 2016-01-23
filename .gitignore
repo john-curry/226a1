@@ -3,3 +3,6 @@ tags
 *.log
 old
 *.err
+written/*.log
+written/*.aux
+
